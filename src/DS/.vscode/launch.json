@@ -1,0 +1,78 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch base",
+            "request": "launch",
+            "mainClass": "base",
+            "projectName": "DS_3f583ca"
+        },
+        {
+            "type": "java",
+            "name": "Launch base",
+            "request": "launch",
+            "mainClass": "Circular_LinkedList.base",
+            "projectName": "DS_3f583ca"
+        },
+        {
+            "type": "java",
+            "name": "Launch base",
+            "request": "launch",
+            "mainClass": "Queue.ArrayImp.base",
+            "projectName": "DS_3f583ca"
+        },
+        {
+            "type": "java",
+            "name": "Launch base",
+            "request": "launch",
+            "mainClass": "Queue.LLImp.base",
+            "projectName": "DS_3f583ca"
+        },
+        {
+            "type": "java",
+            "name": "Launch base",
+            "request": "launch",
+            "mainClass": "BST.base",
+            "projectName": "DS_3f583ca"
+        },
+        {
+            "type": "java",
+            "name": "Launch base",
+            "request": "launch",
+            "mainClass": "Graph.base",
+            "projectName": "DS_3f583ca"
+        },
+        {
+            "type": "java",
+            "name": "Launch fibo",
+            "request": "launch",
+            "mainClass": "Tree.fibo",
+            "projectName": "DS_3f583ca"
+        },
+        {
+            "name": "g++.exe - Build and debug active file",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "C:\\MinGW\\bin\\gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "C/C++: g++.exe build active file"
+        }
+    ]
+}
