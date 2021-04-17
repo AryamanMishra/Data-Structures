@@ -49,17 +49,19 @@ class MinHeap {
         System.out.println();
     }
 
-    public void heapify(int i) {
+    public void minheapify(int i) {
         int left = getleft(i);
         int right = getright(i);
-        if (Integer.min(arr[i], Integer.min(arr[left], arr[right])) == arr[i])
-            return;
-        else if (Integer.min(arr[i], Integer.min(arr[left], arr[right])) == arr[left]) {
-            swap(arr[left], arr[i]);
-            heapify(left);
-        } else {
-            swap(arr[right], arr[i]);
-            heapify(right);
+        int smallest = i;
+        if (left < size && arr[left] < arr[i])
+            smallest = left;
+        if (right < size && arr[right] < arr[smallest])
+            smallest = right;
+        if (smallest != i) {
+            int c = arr[i];
+            arr[i] = arr[smallest];
+            arr[smallest] = c;
+            minheapify(smallest);
         }
     }
 }
