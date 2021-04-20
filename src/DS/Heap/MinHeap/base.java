@@ -64,15 +64,66 @@ class MinHeap {
             minheapify(smallest);
         }
     }
+
+    public int extractMin() {
+        if (size == 0)
+            return Integer.MAX_VALUE;
+        if (size == 1) {
+            --this.size;
+            return this.arr[0];
+        }
+        int swap = this.arr[0];
+        this.arr[0] = this.arr[size - 1];
+        this.arr[size - 1] = swap;
+        --this.size;
+        this.minheapify(0);
+        return this.arr[size];
+    }
+
+    public void changeKey(int i, int x) {
+        arr[i] = x;
+        while (arr[i] < arr[getparent(i)] && i != 0) {
+            int swap = arr[i];
+            arr[i] = arr[getparent(i)];
+            arr[getparent(i)] = swap;
+            i = getparent(i);
+        }
+    }
+
+    public void deleteKey(int i) {
+        if (i >= size || i < 0)
+            return;
+        int swap = arr[i];
+        arr[i] = arr[size - 1];
+        arr[size - 1] = swap;
+        --size;
+        while (arr[i] < arr[getparent(i)] && i != 0) {
+            int s = arr[i];
+            arr[i] = arr[getparent(i)];
+            arr[getparent(i)] = s;
+            i = getparent(i);
+        }
+    }
+
+    public void buildHeap() {
+        for (int i = (size - 2) / 2; i >= 0; i--)
+            minheapify(i);
+    }
 }
 
 public class base {
     public static void main(String[] args) {
-        MinHeap minheap = new MinHeap(5);
-        minheap.insert(2);
-        minheap.insert(4);
-        minheap.insert(3);
-        minheap.insert(1);
+        MinHeap minheap = new MinHeap(9);
+        minheap.insert(10);
+        minheap.insert(20);
+        minheap.insert(30);
+        minheap.insert(40);
+        minheap.insert(50);
+        minheap.insert(35);
+        minheap.insert(38);
+        minheap.insert(45);
+        // minheap.changeKey(3, 5);
+        // minheap.deleteKey(3);
         minheap.print();
 
     }
