@@ -1,3 +1,5 @@
+//*  Documentation and commenting left  *//
+
 package DS.BST;
 
 import DS.Tree.*;
