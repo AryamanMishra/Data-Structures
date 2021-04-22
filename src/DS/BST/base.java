@@ -11,7 +11,7 @@
 
 package DS.BST; // Appropriate package declaration
 
-import DS.Tree.*; // Importing Tree implementation Node to be used 
+import DS.Tree.*;
 
 class BST { // The BST class having all methods to be implemented
     Node root;
